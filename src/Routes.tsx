@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ProfilePage } from "./HomePage/ProfilePage";
+import { ProfilePage } from "./Home/ProfilePage";
 import { RepositoriesPage } from "./Resitories/RepositoriesPage";
 
 export function AppRoutes() {

@@ -32,7 +32,9 @@ export function ProfilePage() {
             <div className="profile-pic">
                 <img src={user.avatar_url} alt="" />
             </div>
-            {user.name}
+            <div className="title">
+                {user.name}
+            </div>
         </div>
     );
 }
