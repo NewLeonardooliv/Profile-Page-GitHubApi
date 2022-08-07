@@ -17,7 +17,7 @@ type Profile = {
     bio: string,
 }
 
-export function HomePage() {
+export function ProfilePage() {
     const [user, setProfile] = useState<Profile[]>([]);
     useEffect(() => {
         document.title = 'Home · ProfilePage';
@@ -29,11 +29,10 @@ export function HomePage() {
 
     return (
         <div>
-            {user.map(prof => {
-                return (
-                    <div key={prof.id}>{prof.name}</div>
-                )
-            })}
+            <div className="profile-pic">
+                <img src={user.avatar_url} alt="" />
+            </div>
+            {user.name}
         </div>
     );
 }
