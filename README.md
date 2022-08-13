@@ -11,4 +11,5 @@ Criação de uma página de portifólio consumindo a API do GitHub utilizando Re
 - React
 - Axios
 - Styled Components
+- Vite
 - React Router DOM
