@@ -52,6 +52,8 @@ export const Social = styled.div`
 
     img {
         width: 1rem;
+        margin-top: 25%;
+        border-radius: 0;
     }
 `;
 
@@ -80,14 +82,16 @@ export const Nav = styled.div`
     
 `;
 
-export const AtualPage = styled.li `
+export const AtualPage = styled.li`
     a {
         color: #0d6efd;
     }
 `;
 
 export const Contents = styled.div`
-    flex: 1 0 0%;
+    flex: 1;
+    margin: 3rem 3rem 3rem 21rem;
+    padding: 3rem;
     
     h1 {
         color: white;
@@ -98,6 +102,10 @@ export const Contents = styled.div`
         font-size: 1rem;
         margin-bottom: 1.5rem;
         font-weight: 300;
-        margin: 0 40rem;
     }
+`;
+
+export const Projects = styled.div `
+    background: #151e29;
+
 `;
