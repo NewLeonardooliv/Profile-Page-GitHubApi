@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../service/api";
-import { AtualPage, Bar, Bio, Container, Contents, Line, Name, Nav, Social } from "./Style";
+import { AtualPage, Bar, Bio, Container, Contents, Line, List, Name, Nav, Social, Title } from "./Style";
 
 interface ProfileProps {
     login: string,
@@ -19,10 +19,10 @@ interface ProfileProps {
     blog: string
 }
 
-export function ProfilePage() {
+export function Resume() {
     const [profile, setProfile] = useState<ProfileProps>({} as ProfileProps);
     useEffect(() => {
-        document.title = 'Home · ProfilePage';
+        document.title = 'Resume · ProfilePage';
 
         api.get("/users/NewLeonardooliv").then(response => {
             setProfile(response.data);
@@ -47,14 +47,19 @@ export function ProfilePage() {
                 </Social>
                 <Line></Line>
                 <Nav>
-                    <AtualPage><a href="/">Início</a></AtualPage>
+                    <li><a href="/">Início</a></li>
                     <li><a href="/repositories">Portfólio</a></li>
-                    <li><a href="/resume">Currículo</a></li>
+                    <AtualPage><a href="/resume">Currículo</a></AtualPage>
                 </Nav>
             </Bar>
             <Contents>
-                <h1>{profile.name}</h1>
-                <h2>{profile.bio}</h2>
+                <Title>
+                    <h1>{profile.name}</h1>
+                </Title>
+                <List>
+                    <li><a href={profile.html_url} target="_blank">Github</a></li>
+                    <li><a href={profile.blog} target="_blank">LinkedIn</a></li>
+                </List>
             </Contents>
         </Container>
     );
