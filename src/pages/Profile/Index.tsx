@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { api } from "../../service/api";
 import GitHubUrl from "../../assets/github.svg"
 import linkedInUrl from "../../assets/linkedin.svg"
+import InstagramUrl from "../../assets/instagram.svg"
+import FacebookUrl from "../../assets/facebook.svg"
 import { AtualPage, Bar, Bio, Container, Contents, Line, Name, Nav, Projects, Social } from "./Style";
 
 interface ProfileProps {
@@ -38,6 +40,22 @@ export const socialMedias = {
         },
         url: "https://www.linkedin.com/in/leonardooliv/"
     },
+    INTAGRAM: {
+        title: "Instagram",
+        image: {
+            source: InstagramUrl,
+            alt: "Perfil Instagram",
+        },
+        url: "https://www.instagram.com/leonardooliv_/"
+    },
+    FACEBOOK: {
+        title: "Facebook",
+        image: {
+            source: FacebookUrl,
+            alt: "Perfil Facebook",
+        },
+        url: "https://www.facebook.com/profile.php?id=100003701469668"
+    },
 };
 
 export function ProfilePage() {
@@ -69,8 +87,8 @@ export function ProfilePage() {
                 <Social>
                     <a href={socialMedias.GITHUB.url} target="_blank"><img src={socialMedias.GITHUB.image.source} alt={socialMedias.GITHUB.image.alt} /></a>
                     <a href={socialMedias.LINKEDIN.url} target="_blank"><img src={socialMedias.LINKEDIN.image.source} alt={socialMedias.LINKEDIN.image.alt} /></a>
-                    <a href={socialMedias.LINKEDIN.url} target="_blank"><img src={socialMedias.LINKEDIN.image.source} alt={socialMedias.LINKEDIN.image.alt} /></a>
-                    <a href={socialMedias.LINKEDIN.url} target="_blank"><img src={socialMedias.LINKEDIN.image.source} alt={socialMedias.LINKEDIN.image.alt} /></a>
+                    <a href={socialMedias.INTAGRAM.url} target="_blank"><img src={socialMedias.INTAGRAM.image.source} alt={socialMedias.INTAGRAM.image.alt} /></a>
+                    <a href={socialMedias.FACEBOOK.url} target="_blank"><img src={socialMedias.FACEBOOK.image.source} alt={socialMedias.FACEBOOK.image.alt} /></a>
                 </Social>
                 <Line></Line>
                 <Nav>
@@ -80,11 +98,12 @@ export function ProfilePage() {
                 </Nav>
             </Bar>
             <Contents>
-                <Projects>
-                    <>{projects.map((item: any) => (
+                {projects.map((item: any) => (
+                    <Projects>
                         <h1>{item.name}</h1>
-                    ))}</>
-                </Projects>
+                        <h2>{item.description}</h2>
+                    </Projects>
+                ))}
             </Contents>
         </Container>
     );

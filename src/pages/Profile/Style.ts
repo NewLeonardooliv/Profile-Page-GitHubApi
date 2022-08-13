@@ -90,10 +90,10 @@ export const AtualPage = styled.li`
 
 export const Contents = styled.div`
     flex: 1;
-    margin: 3rem 3rem 3rem 21rem;
-    padding: 3rem;
+    margin: 0 3rem 3rem 21rem;
     
     h1 {
+        padding: 2rem 0 0 0;
         color: white;
         font-size: 3rem;
     }
@@ -102,10 +102,11 @@ export const Contents = styled.div`
         font-size: 1rem;
         margin-bottom: 1.5rem;
         font-weight: 300;
+        padding: 2rem;
     }
 `;
 
-export const Projects = styled.div `
+export const Projects = styled.div`
     background: #151e29;
 
 `;
