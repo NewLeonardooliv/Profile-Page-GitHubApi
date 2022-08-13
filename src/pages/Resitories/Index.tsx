@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../service/api";
 
-
 type Repository = {
     name: string,
     full_name: string,
