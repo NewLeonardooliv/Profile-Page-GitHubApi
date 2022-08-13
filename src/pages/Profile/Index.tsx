@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { api } from "../service/api";
-import GitHub from "../assets/img/github.svg"
-import LinkedIn from "../assets/img/linkedin.svg"
+import { api } from "../../service/api";
 import "./Style.css"
 
 interface ProfileProps {
