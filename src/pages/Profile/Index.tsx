@@ -40,7 +40,7 @@ export const socialMedias = {
         },
         url: "https://www.linkedin.com/in/leonardooliv/"
     },
-    INTAGRAM: {
+    INSTAGRAM: {
         title: "Instagram",
         image: {
             source: InstagramUrl,
@@ -87,7 +87,7 @@ export function ProfilePage() {
                 <Social>
                     <a href={socialMedias.GITHUB.url} target="_blank"><img src={socialMedias.GITHUB.image.source} alt={socialMedias.GITHUB.image.alt} /></a>
                     <a href={socialMedias.LINKEDIN.url} target="_blank"><img src={socialMedias.LINKEDIN.image.source} alt={socialMedias.LINKEDIN.image.alt} /></a>
-                    <a href={socialMedias.INTAGRAM.url} target="_blank"><img src={socialMedias.INTAGRAM.image.source} alt={socialMedias.INTAGRAM.image.alt} /></a>
+                    <a href={socialMedias.INSTAGRAM.url} target="_blank"><img src={socialMedias.INSTAGRAM.image.source} alt={socialMedias.INSTAGRAM.image.alt} /></a>
                     <a href={socialMedias.FACEBOOK.url} target="_blank"><img src={socialMedias.FACEBOOK.image.source} alt={socialMedias.FACEBOOK.image.alt} /></a>
                 </Social>
                 <Line></Line>
@@ -96,6 +96,7 @@ export function ProfilePage() {
                     <li><a href="/repositories">Portfólio</a></li>
                     <li><a href="/resume">Currículo</a></li>
                 </Nav>
+                <Line></Line>
             </Bar>
             <Contents>
                 {projects.map((item: any) => (

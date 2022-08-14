@@ -15,7 +15,7 @@ export const Bar = styled.div`
     left: 0;
     top: 0;
     height: 100vh;
-    width: 280px;
+    width: 17.5rem;
     background: #1e2a3a;
     color: #fff;
     overflow-y: auto;
@@ -41,8 +41,8 @@ export const Bio = styled.div`
 
 export const Social = styled.div`
     a {
-        width: 32px;
-        height: 32px;
+        width: 2rem;
+        height: 2rem;
         display: inline-block;
         text-align: center;
         border-radius: 50%;
