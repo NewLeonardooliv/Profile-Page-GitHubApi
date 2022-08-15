@@ -49,8 +49,8 @@ export function Portifolio() {
                 <Line></Line>
                 <Nav>
                     <li><a href="/">Início</a></li>
-                    <li><a href="/repositories">Portfólio</a></li>
-                    <AtualPage><a href="/resume">Currículo</a></AtualPage>
+                    <AtualPage><a href="/repositories">Portfólio</a></AtualPage>
+                    <li><a href="/resume">Currículo</a></li>
                 </Nav>
             </Bar>
             <Contents>
