@@ -1,0 +1,16 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/resume",
+            "dest": "/"
+        },
+        {
+            "src": "/repositories",
+            "dest": "/"
+        }
+    ]
+}
