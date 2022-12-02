@@ -1,4 +1,5 @@
 import axios from "axios";
+import { customAlert, errorAlert } from "../components/Alerts";
 
 export const api = axios.create({
     baseURL: `https://api.github.com`
@@ -7,6 +8,6 @@ export const api = axios.create({
 api.interceptors.response.use(
     (response) => response,
     (error) => {
-        throw error
+        customAlert(`Oops...`, `Algo de errado aconteceu.`)
     }
 )
