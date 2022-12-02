@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Container, Contents } from "./Style";
 import { ProjectsList } from "../../components/ProjectsList";
 import { getProfile, getProjects } from "./services";
-import { socialMedias } from "./Const";
+import { socialMedias } from "./const";
 import { TitlePage } from "../../helpers/helpers";
 import { Menu } from "../../components/Menu";
+import { Cards } from "../../components/Cards";
+import { bodyCard } from "./coluns";
 
 export function ProfilePage(): JSX.Element {
     const [profile, setProfile] = useState(Object);
@@ -30,7 +32,7 @@ export function ProfilePage(): JSX.Element {
         <Container>
             <Menu profile={profile} socialMedias={socialMedias} />
             <Contents>
-                <ProjectsList projects={project} />
+                <Cards registros={project} body={bodyCard} />
             </Contents>
         </Container>
     );

@@ -1,6 +1,6 @@
 ## Profile Page GitHub API
 
-![prompt](https://i.imgur.com/W7Ghr5D.png)
+![prompt](https://i.imgur.com/Zb3UKuk.png)
 
 ## 🚀 Projeto
 
